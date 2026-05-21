@@ -3,408 +3,295 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Luminate Dental — Precision. Comfort. Care.</title>
+  <title>Your Dental Practice — Exceptional Care, Every Visit</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="Dental_1.css" />
 </head>
 <body>
 
-  <!-- ── CURSOR ── -->
-  <div class="cursor" id="cursor"></div>
-  <div class="cursor-trail" id="cursorTrail"></div>
-
-  <!-- ── NAV ── -->
-  <nav class="nav" id="nav">
-    <div class="nav-logo">
-      <span class="logo-mark">✦</span>
-      <span class="logo-text">Luminate Dental</span>
-    </div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#hours">Hours</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="#contact" class="nav-cta">Book Now</a>
-    <button class="nav-burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+  <header class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <span class="logo-icon">&#9670;</span>
+      <span>Your Dental Practice</span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#hours">Hours</a>
+      <a href="#contact" class="nav-book">Book a Visit</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-  </nav>
+  </header>
 
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#services" class="mobile-link">Services</a></li>
-      <li><a href="#about"    class="mobile-link">About</a></li>
-      <li><a href="#gallery"  class="mobile-link">Gallery</a></li>
-      <li><a href="#hours"    class="mobile-link">Hours &amp; Location</a></li>
-      <li><a href="#contact"  class="mobile-link">Contact</a></li>
-      <li><a href="#contact"  class="mobile-link cta-link">Book Now ✦</a></li>
-    </ul>
-    <div class="mobile-social">
-      <a href="https://instagram.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#services" class="mn-link">Services</a>
+    <a href="#about"    class="mn-link">About</a>
+    <a href="#gallery"  class="mn-link">Gallery</a>
+    <a href="#hours"    class="mn-link">Hours &amp; Location</a>
+    <a href="#contact"  class="mn-link">Contact</a>
+    <a href="#contact"  class="mn-link mn-cta">Book a Visit &#9670;</a>
+    <div class="mn-social">
+      <a href="#" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
       </a>
-      <a href="https://facebook.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      <a href="#" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
       </a>
-      <a href="https://twitter.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      <a href="#" target="_blank" rel="noopener" aria-label="Google Reviews">
+        <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
       </a>
     </div>
   </div>
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg">
-      <img src="d-dental-office-yuTlQYeehHs-unsplash.jpg" alt="Modern dental office" class="hero-img" />
-      <div class="hero-overlay"></div>
+    <div class="hero-img-wrap">
+      <img src="laurent-yasiel-607-cXjrge4-unsplash.jpg" alt="Your dental team" class="hero-img" />
+      <div class="hero-scrim"></div>
     </div>
     <div class="hero-content">
-      <p class="hero-eyebrow reveal" data-delay="0">Phoenix's Premier Dental Studio</p>
-      <h1 class="hero-title reveal" data-delay="100">
-        <span class="line">Where Precision</span>
-        <span class="line italic">meets Artistry.</span>
+      <p class="hero-tag reveal">&#9670; Exceptional Dental Care</p>
+      <h1 class="hero-title reveal" data-delay="120">
+        Your Best Smile<br /><em>Starts Here.</em>
       </h1>
-      <p class="hero-sub reveal" data-delay="200">Advanced dental care in an environment designed for your comfort. From routine cleanings to full smile transformations.</p>
-      <div class="hero-actions reveal" data-delay="300">
-        <a href="#contact" class="btn btn-primary">Schedule a Visit</a>
-        <a href="#services" class="btn btn-ghost">Explore Services</a>
+      <p class="hero-sub reveal" data-delay="240">Modern dentistry delivered with precision, warmth, and genuine care for every patient who walks through our door.</p>
+      <div class="hero-ctas reveal" data-delay="360">
+        <a href="#contact" class="btn btn-gold">Book a Visit</a>
+        <a href="#services" class="btn btn-outline">Our Services</a>
       </div>
     </div>
-    <div class="hero-scroll-hint">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
-    <div class="hero-stat-bar reveal" data-delay="400">
-      <div class="stat"><span class="stat-num" data-target="2400">0</span><sup>+</sup><p>Smiles Transformed</p></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num" data-target="18">0</span><sup>yrs</sup><p>of Excellence</p></div>
-      <div class="stat-divider"></div>
-      <div class="stat"><span class="stat-num" data-target="99">0</span><sup>%</sup><p>Patient Satisfaction</p></div>
+    <div class="hero-stats reveal" data-delay="480">
+      <div class="hstat"><span class="hstat-n" data-target="2000">0</span><sup>+</sup><p>Smiles Transformed</p></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="hstat-n" data-target="15">0</span><sup> yrs</sup><p>of Excellence</p></div>
+      <div class="hstat-div"></div>
+      <div class="hstat"><span class="hstat-n" data-target="98">0</span><sup>%</sup><p>Patient Satisfaction</p></div>
     </div>
   </section>
 
-  <!-- ── MARQUEE ── -->
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span>Cosmetic Dentistry</span><span class="dot">✦</span>
-      <span>Implants</span><span class="dot">✦</span>
-      <span>Invisalign</span><span class="dot">✦</span>
-      <span>Teeth Whitening</span><span class="dot">✦</span>
-      <span>Root Canal</span><span class="dot">✦</span>
-      <span>Veneers</span><span class="dot">✦</span>
-      <span>Emergency Care</span><span class="dot">✦</span>
-      <span>Pediatric Dentistry</span><span class="dot">✦</span>
-      <span>Cosmetic Dentistry</span><span class="dot">✦</span>
-      <span>Implants</span><span class="dot">✦</span>
-      <span>Invisalign</span><span class="dot">✦</span>
-      <span>Teeth Whitening</span><span class="dot">✦</span>
-      <span>Root Canal</span><span class="dot">✦</span>
-      <span>Veneers</span><span class="dot">✦</span>
-      <span>Emergency Care</span><span class="dot">✦</span>
-      <span>Pediatric Dentistry</span><span class="dot">✦</span>
+  <!-- MARQUEE -->
+  <div class="marquee-bar" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>Cosmetic Dentistry</span><span class="sep">&#9670;</span>
+      <span>Dental Implants</span><span class="sep">&#9670;</span>
+      <span>Clear Aligners</span><span class="sep">&#9670;</span>
+      <span>Teeth Whitening</span><span class="sep">&#9670;</span>
+      <span>Veneers</span><span class="sep">&#9670;</span>
+      <span>Root Canal Therapy</span><span class="sep">&#9670;</span>
+      <span>Preventive Care</span><span class="sep">&#9670;</span>
+      <span>Emergency Dentistry</span><span class="sep">&#9670;</span>
+      <span>Cosmetic Dentistry</span><span class="sep">&#9670;</span>
+      <span>Dental Implants</span><span class="sep">&#9670;</span>
+      <span>Clear Aligners</span><span class="sep">&#9670;</span>
+      <span>Teeth Whitening</span><span class="sep">&#9670;</span>
+      <span>Veneers</span><span class="sep">&#9670;</span>
+      <span>Root Canal Therapy</span><span class="sep">&#9670;</span>
+      <span>Preventive Care</span><span class="sep">&#9670;</span>
+      <span>Emergency Dentistry</span><span class="sep">&#9670;</span>
     </div>
   </div>
 
-  <!-- ── SERVICES ── -->
+  <!-- SERVICES -->
   <section class="services" id="services">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow reveal">What We Offer</p>
-        <h2 class="section-title reveal">Comprehensive Care,<br /><em>Tailored to You</em></h2>
+      <div class="section-head">
+        <p class="eyebrow reveal">What We Offer</p>
+        <h2 class="section-title reveal" data-delay="80">Comprehensive Care<br /><em>Tailored to You</em></h2>
+        <p class="section-sub reveal" data-delay="160">From your first cleaning to a complete smile transformation — we have the expertise and technology to take you there.</p>
       </div>
       <div class="services-grid">
-
-        <div class="service-card reveal" data-delay="0">
-          <div class="service-icon">◈</div>
-          <h3>Cosmetic Dentistry</h3>
-          <p>Veneers, bonding, and smile design to craft the aesthetic you've always envisioned.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="80">
-          <div class="service-icon">◇</div>
-          <h3>Dental Implants</h3>
-          <p>Permanent, natural-looking tooth replacements anchored directly to the jawbone.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="160">
-          <div class="service-icon">◉</div>
-          <h3>Clear Aligners</h3>
-          <p>Discreet orthodontic correction with custom-fitted transparent aligner trays.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="240">
-          <div class="service-icon">◆</div>
-          <h3>Teeth Whitening</h3>
-          <p>Professional-grade in-office whitening for results up to 8 shades brighter.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="320">
-          <div class="service-icon">⬡</div>
-          <h3>Restorative Care</h3>
-          <p>Crowns, bridges, fillings and root canal therapy to restore full function.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
-        <div class="service-card reveal" data-delay="400">
-          <div class="service-icon">◎</div>
-          <h3>Preventive Hygiene</h3>
-          <p>Routine cleanings, digital X-rays, and oral cancer screenings to keep you healthy.</p>
-          <a href="#contact" class="service-link">Learn more →</a>
-        </div>
-
+        <div class="scard reveal"><div class="scard-num">01</div><h3>Cosmetic Dentistry</h3><p>Veneers, bonding, and full smile design crafted to complement your face and reflect your personality.</p></div>
+        <div class="scard reveal" data-delay="80"><div class="scard-num">02</div><h3>Dental Implants</h3><p>Permanent, natural-looking replacements anchored to the jawbone — the gold standard for missing teeth.</p></div>
+        <div class="scard reveal" data-delay="160"><div class="scard-num">03</div><h3>Clear Aligners</h3><p>Discreet orthodontic correction with custom-fitted transparent trays. Straighten your smile without the metal.</p></div>
+        <div class="scard reveal" data-delay="240"><div class="scard-num">04</div><h3>Teeth Whitening</h3><p>Professional in-office whitening for dramatic, lasting results — up to 8 shades brighter in a single visit.</p></div>
+        <div class="scard reveal" data-delay="320"><div class="scard-num">05</div><h3>Restorative Care</h3><p>Crowns, bridges, fillings, and root canal therapy that restore full function and a natural appearance.</p></div>
+        <div class="scard reveal" data-delay="400"><div class="scard-num">06</div><h3>Preventive Hygiene</h3><p>Routine cleanings, digital X-rays, and oral cancer screenings to keep your mouth healthy for a lifetime.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- ── ABOUT ── -->
+  <!-- FEATURE SPLIT -->
+  <section class="feature-split">
+    <div class="fs-img-col">
+      <img src="caroline-lm-QA9fRIi6sFw-unsplash.jpg" alt="Dentist consulting with patient" loading="lazy" />
+    </div>
+    <div class="fs-content">
+      <p class="eyebrow reveal">Our Approach</p>
+      <h2 class="section-title reveal" data-delay="80">We Explain Everything.<br /><em>Rush Nothing.</em></h2>
+      <p class="body-text reveal" data-delay="160">We believe dentistry works better when patients feel informed and in control. Before any procedure, we walk you through what's happening, what to expect, and why it matters. No surprises. No pressure.</p>
+      <p class="body-text reveal" data-delay="240">Our practice is built around three things: clinical precision, honest communication, and a calm environment that actually makes you want to come back.</p>
+      <div class="fs-badges reveal" data-delay="320">
+        <span class="badge">ADA Member</span>
+        <span class="badge">AACD Certified</span>
+        <span class="badge">Invisalign Provider</span>
+        <span class="badge">Sedation Available</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
   <section class="about" id="about">
-    <div class="about-image-col">
-      <div class="about-img-stack">
-        <img src="caroline-lm-QA9fRIi6sFw-unsplash.jpg" alt="Dr. Sarah Chen consulting with a patient" class="about-img about-img-main reveal" />
-        <img src="caroline-lm-ux18C551ghI-unsplash.jpg" alt="Precision dental instruments" class="about-img about-img-secondary reveal" data-delay="150" />
-      </div>
-    </div>
-    <div class="about-content">
-      <p class="section-eyebrow reveal">Meet the Team</p>
-      <h2 class="section-title reveal">Hi, I'm Dr. Sarah Chen —<br /><em>Your Phoenix Dentist</em></h2>
-      <p class="about-body reveal" data-delay="100">I grew up in Phoenix and have spent 18 years building a practice rooted in something simple: treating every patient the way I'd want my own family treated. I started Luminate Dental because I believed dentistry could feel less clinical and more human.</p>
-      <p class="about-body reveal" data-delay="180">My team and I combine the latest technology — same-day crowns, 3D imaging, digital scans — with a slow-down, listen-first philosophy. We explain every step, answer every question, and never rush you into a treatment plan you're unsure about.</p>
-      <p class="about-body reveal" data-delay="260">Whether this is your first visit in years or you're ready for a complete smile transformation, you're in the right place. We'd love to meet you.</p>
-      <div class="about-badges reveal" data-delay="340">
-        <div class="badge">ADA Member</div>
-        <div class="badge">AACD Certified</div>
-        <div class="badge">Invisalign Provider</div>
-        <div class="badge">Sedation Certified</div>
-        <div class="badge">18 Yrs Experience</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PROCEDURE HIGHLIGHT ── -->
-  <section class="highlight">
-    <div class="highlight-inner">
-      <img src="jonathan-borba-hl6uG9cHW5A-unsplash.jpg" alt="Dental procedure" class="highlight-img" />
-      <div class="highlight-overlay"></div>
-      <div class="highlight-text">
-        <p class="section-eyebrow">Advanced Technology</p>
-        <h2>Same-Day Crowns.<br /><em>3D Imaging. Digital Scans.</em></h2>
-        <p>We invest in the tools that make your treatment faster, more precise, and more comfortable than ever before.</p>
-        <a href="#contact" class="btn btn-primary">See Our Technology</a>
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-img-col">
+          <div class="about-img-frame reveal">
+            <img src="laurent-yasiel-607-cXjrge4-unsplash.jpg" alt="Your dentist" loading="lazy" />
+            <div class="about-img-accent"></div>
+          </div>
+          <div class="about-img-sub reveal" data-delay="150">
+            <img src="enis-yavuz-4u2fG9mqGvQ-unsplash.jpg" alt="Dental model" loading="lazy" />
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="eyebrow reveal">Meet Your Dentist</p>
+          <h2 class="section-title reveal" data-delay="80">Hi, I'm<br /><em>Dr. [Your Name]</em></h2>
+          <p class="body-text reveal" data-delay="160">I started this practice because I believe every patient deserves a dentist who actually listens. I grew up watching family members avoid the dentist out of fear — and I made it my mission to be the kind of doctor that changes that.</p>
+          <p class="body-text reveal" data-delay="240">Over [X] years of practice, I've had the privilege of helping thousands of patients go from dreading their appointments to looking forward to them. Whether you need a routine cleaning or a complete smile redesign, you'll get my full attention and honest guidance every step of the way.</p>
+          <blockquote class="about-quote reveal" data-delay="320">"A great smile isn't just cosmetic — it's confidence. And everyone deserves to feel confident."</blockquote>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── GALLERY ── -->
+  <!-- GALLERY -->
   <section class="gallery" id="gallery">
     <div class="container">
-      <div class="section-header">
-        <p class="section-eyebrow reveal">Our Practice</p>
-        <h2 class="section-title reveal">A Space Designed<br /><em>for Calm</em></h2>
+      <div class="section-head">
+        <p class="eyebrow reveal">Our Practice</p>
+        <h2 class="section-title reveal" data-delay="80">A Space Designed<br /><em>for Comfort</em></h2>
       </div>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal">
-        <img src="benyamin-bohlouli-e7MJLM5VGjY-unsplash.jpg" alt="Dental office interior" />
-        <div class="gallery-hover"><span>Modern Operatories</span></div>
+      <div class="gitem reveal">
+        <img src="benyamin-bohlouli-e7MJLM5VGjY-unsplash.jpg" alt="Modern dental operatory" loading="lazy" />
+        <div class="gitem-label">Modern Operatories</div>
       </div>
-      <div class="gallery-item reveal" data-delay="100">
-        <img src="atikah-akhtar-XJptUS8nbhs-unsplash.jpg" alt="Warm lighting" />
-        <div class="gallery-hover"><span>Warm Lighting</span></div>
+      <div class="gitem reveal" data-delay="100">
+        <img src="kari-bjorn-photography-Fdku_oMrDvk-unsplash.jpg" alt="Clean dental suite" loading="lazy" />
+        <div class="gitem-label">Pristine Facilities</div>
       </div>
-      <div class="gallery-item reveal" data-delay="200">
-        <img src="kari-bjorn-photography-Fdku_oMrDvk-unsplash.jpg" alt="Pristine dental room" />
-        <div class="gallery-hover"><span>Pristine Facilities</span></div>
+      <div class="gitem reveal" data-delay="200">
+        <img src="atikah-akhtar-XJptUS8nbhs-unsplash.jpg" alt="Bright dental room" loading="lazy" />
+        <div class="gitem-label">Welcoming Environment</div>
       </div>
     </div>
   </section>
 
-
-  <!-- ── HOURS & LOCATION ── -->
-  <section class="hours-location" id="hours">
-    <div class="hours-inner">
-
-      <!-- Left col: hours + address + phone -->
-      <div class="hours-info">
-        <p class="section-eyebrow reveal">Find Us</p>
-        <h2 class="section-title reveal">Hours &amp;<br /><em>Location</em></h2>
-
-        <div class="hours-block reveal" data-delay="100">
-          <div class="hours-row">
-            <span class="hours-day">Monday – Friday</span>
-            <span class="hours-time">8:00 am – 6:00 pm</span>
+  <!-- HOURS -->
+  <section class="hours" id="hours">
+    <div class="container">
+      <div class="hours-inner">
+        <div class="hours-left">
+          <p class="eyebrow reveal">Find Us</p>
+          <h2 class="section-title reveal" data-delay="80">Hours &amp;<br /><em>Location</em></h2>
+          <div class="hours-table reveal" data-delay="160">
+            <div class="hrow"><span>Monday – Friday</span><span class="ht">8:00 am – 6:00 pm</span></div>
+            <div class="hrow"><span>Saturday</span><span class="ht">9:00 am – 3:00 pm</span></div>
+            <div class="hrow closed"><span>Sunday</span><span class="ht">Closed</span></div>
           </div>
-          <div class="hours-row">
-            <span class="hours-day">Saturday</span>
-            <span class="hours-time">9:00 am – 3:00 pm</span>
-          </div>
-          <div class="hours-row closed">
-            <span class="hours-day">Sunday</span>
-            <span class="hours-time">Closed</span>
-          </div>
-        </div>
-
-        <div class="location-details reveal" data-delay="200">
-          <div class="loc-item">
-            <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21C12 21 5 13.5 5 8.5a7 7 0 0 1 14 0c0 5-7 12.5-7 12.5z"/><circle cx="12" cy="8.5" r="2.5"/></svg>
-            <div>
-              <strong>Address</strong>
-              <p>4820 N 16th St, Suite 200<br />Phoenix, AZ 85016</p>
+          <div class="location-list reveal" data-delay="240">
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M12 21C12 21 5 13.5 5 8.5a7 7 0 0 1 14 0c0 5-7 12.5-7 12.5z"/><circle cx="12" cy="8.5" r="2.5"/></svg>
+              <div><strong>Address</strong><p>123 Main Street, Suite 100<br />Your City, ST 00000</p></div>
             </div>
-          </div>
-          <div class="loc-item">
-            <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            <div>
-              <strong>Phone</strong>
-              <a href="tel:+16025550182" class="phone-link">(602) 555-0182</a>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.94a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <div><strong>Phone</strong><a href="tel:+15550000000" class="phone-link">(555) 000-0000</a></div>
             </div>
-          </div>
-          <div class="loc-item">
-            <svg class="loc-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
-            <div>
-              <strong>Email</strong>
-              <a href="mailto:hello@luminatedental.com" class="email-link">hello@luminatedental.com</a>
+            <div class="loc-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg>
+              <div><strong>Email</strong><a href="mailto:hello@yourpractice.com" class="phone-link">hello@yourpractice.com</a></div>
             </div>
           </div>
         </div>
+        <div class="map-col reveal" data-delay="160">
+          <div class="map-wrap">
+            <iframe title="Practice Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9663095343073!2d-73.98823492357275!3d40.757977571392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1sen!2sus!4v1700000000000" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="directions-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+              Get Directions
+            </a>
+          </div>
+        </div>
       </div>
-
-      <!-- Right col: Google Maps embed -->
-      <div class="map-wrap reveal" data-delay="150">
-        <iframe
-          title="Luminate Dental Location"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3328.854085320656!2d-112.0569!3d33.4872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b12a4a5be8b97%3A0x0!2s4820+N+16th+St%2C+Phoenix%2C+AZ+85016!5e0!3m2!1sen!2sus!4v1700000000000"
-          width="100%"
-          height="100%"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <a href="https://maps.google.com/?q=4820+N+16th+St,+Phoenix,+AZ+85016" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16" height="16"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
-          Get Directions
-        </a>
-      </div>
-
     </div>
   </section>
 
-  <!-- ── CONTACT ── -->
+  <!-- CONTACT -->
   <section class="contact" id="contact">
-    <div class="contact-inner">
-
-      <div class="contact-info">
-        <p class="section-eyebrow reveal">Get In Touch</p>
-        <h2 class="section-title reveal">Ready for Your<br /><em>Best Smile?</em></h2>
-        <p class="contact-blurb reveal" data-delay="80">Fill out the form and we'll get back to you within one business day to confirm your appointment or answer any questions.</p>
-
-        <div class="contact-quick reveal" data-delay="160">
-          <a href="tel:+16025550182" class="quick-link">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (602) 555-0182
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-left">
+          <p class="eyebrow reveal">Get In Touch</p>
+          <h2 class="section-title reveal" data-delay="80">Ready for Your<br /><em>Best Smile?</em></h2>
+          <p class="body-text reveal" data-delay="160">Fill out the form and we'll get back to you within one business day. No pressure, no commitment — just a friendly conversation about your smile.</p>
+          <a href="tel:+15550000000" class="call-link reveal" data-delay="240">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.96-.94a2 2 0 0 1 2.11-.45 12.05 12.05 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            (555) 000-0000
           </a>
-        </div>
-
-        <!-- Social media links -->
-        <div class="social-links reveal" data-delay="240">
-          <p class="social-label">Follow Us</p>
-          <div class="social-icons">
-            <a href="https://instagram.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-icon-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-              <span>Instagram</span>
-            </a>
-            <a href="https://facebook.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-icon-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="22" height="22"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-              <span>Facebook</span>
-            </a>
-            <a href="https://twitter.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X" class="social-icon-link">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              <span>Twitter / X</span>
-            </a>
-            <a href="https://g.page/luminatedental/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews" class="social-icon-link">
-              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-              <span>Google Reviews</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form-wrap reveal" data-delay="200">
-        <form class="contact-form" id="contactForm" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="fname">First Name <span class="req">*</span></label>
-              <input type="text" id="fname" name="fname" placeholder="Jane" required autocomplete="given-name" />
-            </div>
-            <div class="form-group">
-              <label for="lname">Last Name <span class="req">*</span></label>
-              <input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name" />
+          <div class="social-row reveal" data-delay="320">
+            <p class="social-lbl">Follow Us</p>
+            <div class="social-icons">
+              <a href="#" target="_blank" rel="noopener" aria-label="Instagram" class="sicon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                <span>Instagram</span>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Facebook" class="sicon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                <span>Facebook</span>
+              </a>
+              <a href="#" target="_blank" rel="noopener" aria-label="Google Reviews" class="sicon">
+                <svg viewBox="0 0 24 24" width="20" height="20"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+                <span>Google Reviews</span>
+              </a>
             </div>
           </div>
-          <div class="form-group">
-            <label for="email">Email <span class="req">*</span></label>
-            <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" />
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone <span class="req">*</span></label>
-            <input type="tel" id="phone" name="phone" placeholder="(602) 555-0000" required autocomplete="tel" />
-          </div>
-          <div class="form-group">
-            <label for="message">Message <span class="req">*</span></label>
-            <textarea id="message" name="message" rows="5" placeholder="Tell us about your smile goals or what you'd like to discuss…" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">Send Message ✦</button>
-          <p class="form-success" id="formSuccess">✦ Thank you! We'll be in touch within one business day.</p>
-          <p class="form-error"   id="formError">Please fill in all required fields correctly.</p>
-        </form>
+        </div>
+        <div class="contact-form-wrap reveal" data-delay="200">
+          <form id="contactForm" novalidate>
+            <div class="frow">
+              <div class="fgroup"><label for="fname">First Name <span class="req">*</span></label><input type="text" id="fname" name="fname" placeholder="Jane" required autocomplete="given-name" /></div>
+              <div class="fgroup"><label for="lname">Last Name <span class="req">*</span></label><input type="text" id="lname" name="lname" placeholder="Doe" required autocomplete="family-name" /></div>
+            </div>
+            <div class="fgroup"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email" /></div>
+            <div class="fgroup"><label for="phone">Phone <span class="req">*</span></label><input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required autocomplete="tel" /></div>
+            <div class="fgroup"><label for="message">Message <span class="req">*</span></label><textarea id="message" name="message" rows="4" placeholder="Tell us about your smile goals…" required></textarea></div>
+            <button type="submit" class="btn btn-gold btn-full">Send Message &#9670;</button>
+            <p class="form-ok" id="formOk">&#9670; Thank you! We'll be in touch within one business day.</p>
+            <p class="form-err" id="formErr">Please fill in all required fields correctly.</p>
+          </form>
+        </div>
       </div>
-
     </div>
   </section>
 
-  <!-- ── FOOTER ── -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-logo">
-          <span class="logo-mark">✦</span>
-          <span class="logo-text">Luminate Dental</span>
-        </div>
-        <p class="footer-tagline">Precision. Comfort. Care.</p>
+        <div class="footer-logo"><span class="logo-icon">&#9670;</span> Your Dental Practice</div>
+        <p>Exceptional Care, Every Visit.</p>
       </div>
-      <div class="footer-links">
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#gallery">Gallery</a>
         <a href="#hours">Hours</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
       <div class="footer-social">
-        <a href="https://instagram.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="https://facebook.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="https://twitter.com/luminatedental" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
-          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://g.page/luminatedental/review" target="_blank" rel="noopener noreferrer" aria-label="Google Reviews">
-          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        </a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" target="_blank" rel="noopener" aria-label="Google"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg></a>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Luminate Dental · All Rights Reserved · <a href="tel:+16025550182">(602) 555-0182</a> · Phoenix, AZ</p>
+      <p>© 2026 Your Dental Practice &nbsp;·&nbsp; All Rights Reserved &nbsp;·&nbsp; <a href="tel:+15550000000">(555) 000-0000</a></p>
     </div>
   </footer>
 
